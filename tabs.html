@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+				/* outline: 1px solid red; */
+				font-family: Arial, Helvetica, sans-serif;
+			}
+			:root {
+				--pr-cl: #666666;
+				--se-cl: #ffffff;
+			}
+			#wrap {
+				width: 50vw;
+				height: 50vh;
+				transform: translate(50%, 50%);
+			}
+			#wrap-tabs {
+				display: flex;
+				transform: translateY(1px);
+			}
+			.tab {
+				padding: 5px 10px;
+				cursor: pointer;
+				border-radius: 3px 3px 0 0;
+				font-size: 0.7rem;
+				user-select: none;
+				color: var(--pr-cl);
+			}
+			#wrap-views {
+				/* display: flex; */
+			}
+			.view {
+				display: none;
+				background-color: var(--pr-cl);
+			}
+			.tab.active {
+				background-color: var(--pr-cl);
+				color: var(--se-cl);
+			}
+			.view.active {
+				display: block;
+			}
+			.search {
+				display: flex;
+				background-color: #f5f5f5;
+				gap: 1px;
+			}
+			.wrap_search {
+				padding: 5px;
+				font-size: 0.8rem;
+				display: flex;
+				background-color: var(--se-cl);
+				justify-content: space-between;
+				width: 100%;
+				border-radius: 0 5px 5px 0;
+				gap: 5px;
+			}
+			.search_input {
+				border: none;
+				padding: 0 10px;
+				width: 100%;
+			}
+			.main_view {
+				padding: 10px;
+				display: flex;
+				flex-direction: column;
+				gap: 10px;
+			}
+            #wrap-project-option,
+			#wrap-option {
+				display: grid;
+				gap: 5px;
+				align-items: center;
+                width: 100%;
+			}
+            #wrap-option{
+                grid-template-columns: repeat(4, 1fr) minmax(auto, 30px);
+            }
+            #wrap-project-option{
+                grid-template-columns: repeat(3, 1fr) minmax(auto, 20px);
+
+            }
+			.option {
+				border: 1px solid #9b9b9b;
+				border-radius: 3px;
+				padding: 4px 8px;
+				font-size: 0.7rem;
+				color: var(--se-cl);
+				justify-content: space-between;
+				display: flex;
+				cursor: pointer;
+				white-space: nowrap;
+				gap: 5px;
+			}
+			#clear {
+				color: var(--se-cl);
+				text-align: right;
+				cursor: pointer;
+			}
+			.type {
+				display: flex;
+				padding: 5px;
+				background-color: var(--se-cl);
+				font-size: 0.8rem;
+				align-items: center;
+				white-space: nowrap;
+				gap: 5px;
+				cursor: pointer;
+				border-radius: 5px 0 0 5px;
+			}
+			.search_button {
+				display: flex;
+				align-items: center;
+				gap: 5px;
+				background-color: #e03c33;
+				color: var(--se-cl);
+				padding: 5px 8px;
+				border-radius: 3px;
+				white-space: nowrap;
+				font-size: 0.7rem;
+				cursor: pointer;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="wrap">
+			<div id="wrap-tabs">
+				<div class="tab">Nhà đất bán</div>
+				<div class="tab">Nhà đất cho thuê</div>
+				<div class="tab">Dự án</div>
+			</div>
+			<div id="wrap-views">
+				<div class="view">
+					<div class="main_view">
+						<div class="search">
+							<div class="type">
+								<div>⋁</div>
+								<div>Loại nhà đất</div>
+								<div>⋁</div>
+							</div>
+							<div class="wrap_search">
+								<input class="search_input" type="text" placeholder="Đường Võ Văn Kiệt" />
+								<div class="search_button">
+									<div>O</div>
+									<div>Tìm kiếm</div>
+								</div>
+							</div>
+						</div>
+						<div id="wrap-option">
+							<div class="option">
+								<div>Trên toàn quốc</div>
+								<div>⋁</div>
+							</div>
+							<div class="option">
+								<div>Mức giá</div>
+								<div>⋁</div>
+							</div>
+							<div class="option">
+								<div>Diện tích</div>
+								<div>⋁</div>
+							</div>
+							<div class="option">
+								<div>Lọc thêm</div>
+								<div>⋁</div>
+							</div>
+							<div id="clear">↻</div>
+						</div>
+					</div>
+				</div>
+				<div class="view">
+					<div class="main_view">
+						<div class="search">
+							<div class="type">
+								<div>⋁</div>
+								<div>Loại nhà đất</div>
+								<div>⋁</div>
+							</div>
+							<div class="wrap_search">
+								<input class="search_input" type="text" placeholder="Đường Nguyễn Thị Minh Khai" />
+								<div class="search_button">
+									<div>O</div>
+									<div>Tìm kiếm</div>
+								</div>
+							</div>
+						</div>
+						<div id="wrap-option">
+							<div class="option">
+								<div>Trên toàn quốc</div>
+								<div>⋁</div>
+							</div>
+							<div class="option">
+								<div>Mức giá</div>
+								<div>⋁</div>
+							</div>
+							<div class="option">
+								<div>Diện tích</div>
+								<div>⋁</div>
+							</div>
+							<div class="option">
+								<div>Lọc thêm</div>
+								<div>⋁</div>
+							</div>
+							<div id="clear">↻</div>
+						</div>
+					</div>
+				</div>
+				<div class="view">
+					<div class="main_view">
+						<div class="search">
+							<div class="type">
+								<div>⋁</div>
+								<div>Loại nhà đất</div>
+								<div>⋁</div>
+							</div>
+							<div class="wrap_search">
+								<input
+									class="search_input"
+									type="text"
+									placeholder="Tìm nhahn. VD: Vinhomes Central Park"
+								/>
+								<div class="search_button">
+									<div>O</div>
+									<div>Tìm kiếm</div>
+								</div>
+							</div>
+						</div>
+						<div id="wrap-project-option">
+							<div class="option">
+								<div>Trên toàn quốc</div>
+								<div>⋁</div>
+							</div>
+							<div class="option">
+								<div>Mức giá</div>
+								<div>⋁</div>
+							</div>
+							<div class="option">
+								<div>Trạng thái</div>
+								<div>⋁</div>
+							</div>
+							<div id="clear">↻</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script>
+			const views = document.querySelectorAll(".view");
+			const tabs = document.querySelectorAll(".tab");
+			const defaultActive = 2;
+			const activeClass = "active";
+			let currentTabActive = { element: tabs[defaultActive] };
+			let currentViewActive = { element: views[defaultActive] };
+			currentTabActive.element.classList.add(activeClass);
+			currentViewActive.element.classList.add(activeClass);
+			tabs.forEach((tab, i) => {
+				tab.addEventListener("click", (e) => {
+					update(currentTabActive, tabs[i]);
+					update(currentViewActive, views[i]);
+				});
+			});
+			function update(current, theNew) {
+				current.element.classList.remove(activeClass);
+				current.element = theNew;
+				current.element.classList.add(activeClass);
+			}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    :root {
+        --pr-cl: #666666;
+        --se-cl: #ffffff;
+    }
+
+    #wrap {
+        width: 50vw;
+        height: 50vh;
+        transform: translate(50%, 50%);
+    }
+
+    #wrap-tabs {
+        display: flex;
+        margin: 0 auto;
+    }
+
+    .tab {
+        padding: 5px 10px;
+        cursor: pointer;
+        border-radius: 3px 3px 0 0;
+        font-size: 0.7rem;
+        user-select: none;
+        color: var(--pr-cl);
+    }
+</style>
+
+<body>
+    <div id="wrap">
+        <div id="wrap-tabs">
+            <div class="tab">BOOK</div>
+            <div class="tab">CHECK-IN</div>
+            <div class="tab">MANAGE BOOKING</div>
+            <div class="tab">FLIGHT INFO</div>
+        </div>
+        <div id="wrap-views">
+            <div class="view">
+                <div class="main_view">
+                    <div class="text">Hi, where would you like to go?</div>
+                    <label>From</label>
+                    <input type="text" name="" id="" placeholder="Hochiminh city">
+                    <label>To</label>
+                    <input type="text" name="" id="" placeholder="Hanoi city">
+                </div>
+            </div>
+            <div class="view">
+                <div class="main_view">
+
+                </div>
+            </div>
+            <div class="view">
+                <div class="main_view">
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

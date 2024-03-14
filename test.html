@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        background-color: burlywood;
+        display: flex;
+        height: 100vh;
+    }
+    .mobile,
+    .tablet,
+    .PC {
+        margin: auto;
+        font-size: 100px;
+        color: #fff;
+        display: none;
+    }
+
+    @media only screen and (max-width: 739px) {
+        .mobile {
+            display: block;
+        }
+    }
+
+    @media only screen and (min-width: 740px) and (max-width: 1023px) {
+        .tablet {
+            display: block;
+        }
+    }
+
+    @media only screen and (min-width: 1024px) {
+        .PC {
+            display: block;
+        }
+    }
+</style>
+<body>
+    <h2 class="mobile">Mobile</h2>
+    <h2 class="tablet">Tablet</h2>
+    <h2 class="PC">PC</h2>
+</body>
+</html>
